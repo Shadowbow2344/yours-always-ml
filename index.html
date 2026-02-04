@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💕</title>
+    <link rel="icon" type="image/x-icon" href="https://emojicdn.elk.sh/💌">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f43f5e', // rose-500
+                        secondary: '#8b5cf6', // violet-500
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-900 text-slate-100 overflow-x-hidden">
+    <!-- Floating Hearts Background -->
+    <floating-hearts></floating-hearts>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-rose-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="heart" class="text-rose-500 fill-rose-500"></i>
+                    <span class="font-bold text-xl bg-gradient-to-r from-rose-400 to-violet-400 bg-clip-text text-transparent">
+                        Us 💕
+                    </span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-rose-400 transition-colors">Home</a>
+                    <a href="#moments" class="hover:text-rose-400 transition-colors">Moments</a>
+                    <a href="#letter" class="hover:text-rose-400 transition-colors">My Letter</a>
+                    <a href="#question" class="px-4 py-2 rounded-full bg-gradient-to-r from-rose-500 to-violet-500 hover:from-rose-600 hover:to-violet-600 transition-all transform hover:scale-105">
+                        The Question
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative pt-16">
+        <div class="max-w-4xl mx-auto px-4 text-center z-10">
+            <div class="mb-6 inline-block">
+                <span class="px-4 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-sm font-medium">
+                    Distance means so little when someone means so much
+                </span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-rose-400 via-violet-400 to-rose-400 bg-clip-text text-transparent animate-gradient">
+                    I Love You
+                </span>
+                <br>
+                <span class="text-3xl md:text-5xl text-slate-300 font-light">Across Every Mile</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Even though we're far apart, you're always right here in my heart. 
+                This little corner of the internet is just for you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#question" class="px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-violet-500 text-white font-bold text-lg hover:shadow-rose-500/50 hover:shadow-lg transition-all transform hover:scale-105 flex items-center gap-2">
+                    <i data-feather="mail"></i>
+                    Open Your Valentine
+                </a>
+                <a href="#letter" class="px-8 py-4 rounded-full border-2 border-rose-500/30 text-rose-400 font-bold text-lg hover:bg-rose-500/10 transition-all flex items-center gap-2">
+                    <i data-feather="book-open"></i>
+                    Read My Letter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="py-20 bg-slate-800/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="glass-card rounded-3xl p-8 md:p-12 text-center">
+                <h2 class="text-3xl font-bold mb-2 text-rose-400">Counting Down Until I See You</h2>
+                <p class="text-slate-400 mb-8">Every second brings us closer</p>
+                <countdown-timer target-date="2024-02-14T00:00:00"></countdown-timer>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Love Letter Section -->
+    <section id="letter" class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div class="max-w-3xl mx-auto px-4">
+            <love-card></love-card>
+        </div>
+    </section>
+
+    <!-- The Big Question -->
+    <section id="question" class="min-h-screen flex items-center justify-center relative py-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-violet-500/10"></div>
+        <div class="max-w-2xl mx-auto px-4 text-center relative z-10">
+            <div class="glass-card rounded-3xl p-8 md:p-16 border-rose-500/30">
+                <div class="mb-8">
+                    <i data-feather="heart" class="w-16 h-16 text-rose-500 mx-auto fill-rose-500 animate-pulse-slow"></i>
+                </div>
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Will You Be My<br>
+                    <span class="text-rose-400">Valentine?</span>
+                </h2>
+                <p class="text-xl text-slate-300 mb-12">
+                    I know we're miles apart, but my heart is right there with you. 
+                    Will you make me the happiest person and be my Valentine?
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center relative">
+                    <button id="yesBtn" class="px-12 py-4 rounded-full bg-gradient-to-r from-rose-500 to-violet-500 text-white font-bold text-xl hover:shadow-rose-500/50 hover:shadow-2xl transition-all transform hover:scale-110 animate-bounce-slow">
+                        YES! 💕
+                    </button>
+                    <button id="noBtn" class="px-8 py-4 rounded-full border-2 border-slate-600 text-slate-400 font-medium hover:border-rose-500/50 hover:text-rose-400 transition-all absolute sm:relative sm:left-0 left-1/2 -translate-x-1/2 sm:translate-x-0">
+                        No
+                    </button>
+                </div>
+
+                <div id="successMessage" class="hidden mt-8 p-6 bg-rose-500/20 rounded-2xl border border-rose-500/30 animate-fade-in">
+                    <p class="text-2xl font-bold text-rose-400 mb-2">You just made my day! 🎉</p>
+                    <p class="text-slate-300">I love you so much. Can't wait to celebrate with you, even from afar.</p>
+                    <div class="mt-4 flex justify-center gap-2">
+                        <span class="text-4xl animate-bounce">🌹</span>
+                        <span class="text-4xl animate-bounce" style="animation-delay: 0.1s">💝</span>
+                        <span class="text-4xl animate-bounce" style="animation-delay: 0.2s">🌹</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="flex justify-center items-center gap-2 mb-4">
+                <i data-feather="heart" class="text-rose-500 fill-rose-500 w-5 h-5"></i>
+                <span class="text-slate-400">Made with love for you</span>
+                <i data-feather="heart" class="text-rose-500 fill-rose-500 w-5 h-5"></i>
+            </div>
+            <p class="text-slate-500 text-sm">
+                No matter the distance, you're always in my heart. <br>
+                Happy Valentine's Day, my love.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="components/floating-hearts.js"></script>
+    <script src="components/countdown-timer.js"></script>
+    <script src="components/love-card.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>

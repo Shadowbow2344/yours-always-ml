@@ -1,0 +1,145 @@
+/* Custom Animations and Styles */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 30% {
+        transform: scale(1.1);
+    }
+    20%, 40% {
+        transform: scale(1);
+    }
+}
+
+.animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 8s linear infinite;
+}
+
+.animate-fade-in {
+    animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-bounce-slow {
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #f43f5e, #8b5cf6);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #e11d48, #7c3aed);
+}
+
+/* Selection Color */
+::selection {
+    background: rgba(244, 63, 94, 0.3);
+    color: white;
+}
+
+/* Smooth reveal animation classes */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Heart floating animation specific */
+.heart-particle {
+    position: absolute;
+    color: #f43f5e;
+    font-size: 20px;
+    animation: float-up 4s ease-in forwards;
+    pointer-events: none;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100vh) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(90vh) scale(1) rotate(10deg);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(0.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Typewriter effect cursor */
+.typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: #f43f5e;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* No button escape animation */
+.escape-animation {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
